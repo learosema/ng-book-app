@@ -1,0 +1,7 @@
+<ng-container *ngIf="books$ | async as books">
+  <app-book-item
+    *ngFor="let book of books"
+    [book]="book"
+    (sendTitle)="clickHandler($event)"
+  ></app-book-item>
+</ng-container>
